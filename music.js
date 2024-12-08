@@ -28,8 +28,8 @@ function loadMusic(index) {
   const song = allMusic[index];
   musicName.innerText = song.name;
   musicArtist.innerText = song.artist;
-  musicImg.src = `{song.src}.jpg`;
-  mainAudio.src = `{song.src}.mp3`;
+  musicImg.src = `${song.src}.jpg`;
+  mainAudio.src = `${song.src}.mp3`;
 }
 
 // Play music
@@ -182,7 +182,7 @@ allMusic.forEach((song, index) => {
         <p>${song.artist}</p>
       </div>
       <span id="${song.src}" class="audio-duration">3:40</span>
-      <audio class="${song.src}" src="songs/${song.src}.mp3"></audio>
+      <audio class="${song.src}" src="so"></audio>
     </li>`
   ulTag.insertAdjacentHTML("beforeend", liTag);
 
