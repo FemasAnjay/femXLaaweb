@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal || www.codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Side Navigation Bar in HTML CSS JavaScript</title>
+    <link rel="stylesheet" href="music.css" />
+    
+ 
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="L_20241207_081831_0000-removebg-preview.png" alt=""></i>Lovelys
+      </div>
+
+      <div class="search_bar">
+        <input type="text" placeholder="Search" />
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+
+    </nav>
+
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard"></div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+              <span class="navlink">Home</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+
+            <ul class="menu_items submenu">
+  <li><a href="index.html" class="nav_link sublink"><i class='bx bx-log-in'></i> Login</a></li>
+  <li><a href="menu.html" class="nav_link sublink"><i class='bx bx-menu'></i> Menu</a></li>
+  <li><a href="about.html" class="nav_link sublink"><i class='bx bx-user'></i> About</a></li>
+</ul>
+          </li>
+          <!-- end -->
+
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+           <li class="item">
+   <div href="#" class="nav_link submenu_item">
+     <span class="navlink_icon">
+       <i class='bx bxs-share-alt'></i>
+     </span>
+     <span class="navlink">Social</span>
+     <i class="bx bx-chevron-right arrow-left"></i>
+   </div>
+
+            <ul class="menu_items submenu">
+  <li><a href="https://www.facebook.com/mfemasr.r?mibextid=ZbWKwL" class="nav_link sublink"><i class='bx bxl-facebook'></i> Facebook</a></li>
+  <li><a href="https://www.instagram.com/rifiansyhfemas/profilecard/?igsh=MXNuZDZiajNmZGl1OA==" class="nav_link sublink"><i class='bx bxl-instagram'></i> Instagram</a></li>
+  <li><a href="https://www.tiktok.com/@lirfxg?_t=8s0P7UnbIkp&_r=1" class="nav_link sublink"><i class='bx bxl-tiktok'></i> TikTok</a></li>
+</ul>
+          </li>
+          <!-- end -->
+        </ul>
+
+        <ul class="menu_items">
+          <div class="menu_title menu_editor"></div>
+          <!-- duplicate these li tag if you want to add or remove navlink only -->
+          <!-- Start -->
+             <li class="item">
+     <a href="magicbuild.html" class="nav_link">
+       <span class="navlink_icon">
+         <i class="bx bx-image"></i>
+       </span>
+       <span class="navlink">Best Pictures</span>
+     </a>
+     </li>
+   </li>
+   </li>
+<li class="item">
+  <a href="crypto.html" class="nav_link">
+    <span class="navlink_icon">
+      <i class="fab fa-bitcoin"></i>
+    </span>
+    <span class="navlink">Crypto Price</span>
+  </a>
+</li>
+          <!-- End -->
+
+          <li class="item">
+            <a href="game.html" class="nav_link">
+              <span class="navlink_icon">
+                <i class="fas fa-gamepad"></i>
+              </span>
+              <span class="navlink">Game</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="fas fa-music"></i>
+              </span>
+              <span class="navlink">Music</span>
+            </a>
+
+
+        <!-- Sidebar Open / Close -->
+        <div class="bottom_content">
+          <div class="bottom expand_sidebar">
+            <span> Expand</span>
+            <i class='bx bx-log-in' ></i>
+          </div>
+          <div class="bottom collapse_sidebar">
+            <span> Collapse</span>
+            <i class='bx bx-log-out'></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+ 
+</html>
+<div>
+
+
+
+
+
+<body>
+  <div class="wrapper">
+    <div class="top-bar">
+      <i class="material-icons">expand_more</i>
+      <span>Now Playing</span>
+      <i class="material-icons">more_horiz</i>
+    </div>
+    <div class="img-area">
+      <img src="" alt="">
+    </div>
+    <div class="song-details">
+      <p class="name"></p>
+      <p class="artist"></p>
+    </div>
+    <div class="progress-area">
+      <div class="progress-bar">
+        <audio id="main-audio" src=""></audio>
+      </div>
+      <div class="song-timer">
+        <span class="current-time">0:00</span>
+        <span class="max-duration">0:00</span>
+      </div>
+    </div>
+    <div class="controls">
+      <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+      <i id="prev" class="material-icons">skip_previous</i>
+      <div class="play-pause">
+        <i class="material-icons play">play_arrow</i>
+      </div>
+      <i id="next" class="material-icons">skip_next</i>
+      <i id="more-music" class="material-icons">queue_music</i>
+    </div>
+    <div class="music-list">
+      <div class="header">
+        <div class="row">
+          <i class= "list material-icons">queue_music</i>
+          <span>Music list</span>
+        </div>
+        <i id="close" class="material-icons">close</i>
+      </div>
+      <ul>
+        <!-- here li list are coming from js -->
+      </ul>
+    </div>
+  </div>
+</body>
+  <script src="music-list.js"></script>
+  <script src="music.js"></script>
+</html>

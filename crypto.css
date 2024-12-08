@@ -1,0 +1,91 @@
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(180deg, #0f082c, #1e164b);
+  color: #fff;
+  padding: 10px;
+}
+
+/* Main Section */
+.crypto-table {
+  border-radius: 20px;
+  margin-top: 300px;
+  text-align: center;
+  background-color: blueviolet;
+  margin-bottom: 50px;
+}
+
+.crypto-table h1 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.currency-selector {
+  margin-bottom: 10px;
+}
+
+.currency-selector select {
+  padding: 5px;
+  font-size: 0.9em;
+  border-radius: 3px;
+  border: none;
+}
+
+/* Table */
+.crypto-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.85em;
+}
+
+.crypto-table th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #444;
+}
+
+.crypto-table th {
+  background: #7a2bff;
+  font-weight: bold;
+}
+
+.crypto-table tbody tr:nth-child(even) {
+  background: #1b1238;
+}
+
+.crypto-table tbody tr:hover {
+  background: #2a1d4f;
+}
+
+.crypto-table img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .crypto-table h1 {
+    font-size: 1.3em;
+  }
+
+  .crypto-table table {
+    font-size: 0.75em;
+  }
+
+  .currency-selector select {
+    font-size: 0.85em;
+  }
+
+  .crypto-table th, td {
+    padding: 6px;
+  }
+}

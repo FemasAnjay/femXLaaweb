@@ -1,0 +1,523 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --white-color: #fff;
+  --blue-color: #4070f4;
+  --grey-color: #707070;
+  --grey-color-light: #aaa;
+}
+body {
+  background-color: #e7f2fd;
+  transition: all 0.5s ease;
+}
+body.dark {
+  background-color: #333;
+}
+body.dark {
+  --white-color: #333;
+  --blue-color: #fff;
+  --grey-color: #f2f2f2;
+  --grey-color-light: #aaa;
+}
+
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  z-index: 1000;
+  box-shadow: 0 0 2px var(--grey-color-light);
+}
+.logo_item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--blue-color);
+}
+.navbar img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.search_bar {
+  height: 47px;
+  max-width: 430px;
+  width: 100%;
+}
+.search_bar input {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+  font-size: 18px;
+  outline: none;
+  background-color: var(--white-color);
+  color: var(--grey-color);
+  border: 1px solid var(--grey-color-light);
+  padding: 0 20px;
+}
+.navbar_content {
+  display: flex;
+  align-items: center;
+  column-gap: 25px;
+}
+.navbar_content i {
+  cursor: pointer;
+  font-size: 20px;
+  color: var(--grey-color);
+}
+
+/* sidebar */
+.sidebar {
+  background-color: var(--white-color);
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 80px 20px;
+  z-index: 100;
+  overflow-y: scroll;
+  box-shadow: 0 0 1px var(--grey-color-light);
+  transition: all 0.5s ease;
+}
+
+i{
+  margin-right:8px;
+}
+.sidebar.close {
+  left: -260px
+  padding: 60px 0;
+  width: 80px;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+.menu_content {
+  position: relative;
+}
+.menu_title {
+  margin: 15px 0;
+  padding: 0 20px;
+  font-size: 18px;
+}
+.sidebar.close .menu_title {
+  padding: 6px 30px;
+}
+.menu_title::before {
+  color: var(--grey-color);
+  white-space: nowrap;
+}
+.menu_dahsboard::before {
+  content: "Dashboard";
+}
+.menu_editor::before {
+  content: "Editor";
+}
+.menu_setting::before {
+  content: "Setting";
+}
+.sidebar.close .menu_title::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 18px;
+  border-radius: 12px;
+  background: var(--grey-color-light);
+}
+.menu_items {
+  padding: 0;
+  list-style: none;
+}
+.navlink_icon {
+  position: relative;
+  font-size: 22px;
+  min-width: 50px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 6px;
+}
+.navlink_icon::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 100px);
+  left: -20px;
+}
+.navlink_icon:hover {
+  background: var(--blue-color);
+}
+.sidebar .nav_link {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--grey-color);
+  white-space: nowrap;
+}
+.sidebar.close .navlink {
+  display: none;
+}
+.nav_link:hover {
+  color: var(--white-color);
+  background: var(--blue-color);
+}
+.sidebar.close .nav_link:hover {
+  background: var(--white-color);
+}
+.submenu_item {
+  cursor: pointer;
+}
+.submenu {
+  display: none;
+}
+.submenu_item .arrow-left {
+  position: absolute;
+  right: 10px;
+  display: inline-block;
+  margin-right: auto;
+}
+.sidebar.close .submenu {
+  display: none;
+}
+.show_submenu ~ .submenu {
+  display: block;
+}
+.show_submenu .arrow-left {
+  transform: rotate(90deg);
+}
+.submenu .sublink {
+  padding: 15px 15px 15px 52px;
+}
+.bottom_content {
+  position: fixed;
+  bottom: 60px;
+  left: 0;
+  width: 260px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.bottom {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 0;
+  justify-content: space-around;
+  padding: 18px 0;
+  text-align: center;
+  width: 100%;
+  color: var(--grey-color);
+  border-top: 1px solid var(--grey-color-light);
+  background-color: var(--white-color);
+}
+.bottom i {
+  font-size: 20px;
+}
+.bottom span {
+  font-size: 18px;
+}
+.sidebar.close .bottom_content {
+  width: 50px;
+  left: 15px;
+}
+.sidebar.close .bottom span {
+  display: none;
+}
+.sidebar.hoverable .collapse_sidebar {
+  display: none;
+}
+#sidebarOpen {
+  display: none;
+  font-size: 20px;
+  cursor: point;
+}
+@media screen and (max-width: 768px) {
+  #sidebarOpen {
+    font-size: 25px;
+    display: block;
+    margin-right: 10px;
+    cursor: pointer;
+    color: var(--grey-color);
+  }
+  .sidebar.close {
+    left: -100%;
+  }
+  .search_bar {
+    display: none;
+  }
+  .sidebar.close .bottom_content {
+    left: -100%;
+  }
+}
+
+
+
+
+
+
+/* Kontainer gambar */
+.image-container {
+  height: calc(100vh - 60px); /* Penuh kecuali tinggi navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px; /* Menjaga jarak di bawah navbar */
+}
+
+.image-container img {
+  width: 200px; /* Ukuran gambar */
+  height: 200px;
+  border-radius: 60px; /* Sudut melengkung */
+}
+
+/* Ensure the body takes full height and center the content */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* TEXT ONLY REPLACE IT IN MODE /*
+
+/* Wrapper for image and cube */
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 350px;
+}
+
+/* Image container */
+.image-container {
+  margin-bottom: -180px; /* Add space below the image */
+}
+
+/* Cube container with adjusted position */
+.cube-container {
+  perspective: 1000px; /* Gives 3D effect to the cube */
+  margin-top: -20px; /* Adjust this value to lift the cube upwards */
+}
+
+/* Cube styling */
+.cube {
+  width: 200px;
+  height: 200px;
+  background-color: #3498db;
+  border-radius: 15px; /* Rounded corners to create the curved effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cube p {
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Hover Effect */
+.cube:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* Cube Click Effect (expand when clicked) */
+.cube:active {
+  transform: scale(1.2); /* Expand the cube when clicked */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow when active */
+}
+
+/* JAM BUNDAR */
+/* Import Google Font - Poppins */
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5372F0;
+  padding: 10px; /* Menambahkan padding agar konten tidak mepet di tepi layar */
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 400px; /* Memperkecil ukuran wrapper untuk perangkat mobile */
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px 20px 15px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  color: #202842;
+}
+
+.content {
+  margin: 20px 0;
+}
+
+.quote-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.wrapper {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 300px; /* Memperkecil ukuran wrapper */
+  background: #fff;
+  border-radius: 40px;
+  padding: 20px 20px 15px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+}
+
+.quote-area i {
+  font-size: 18px;
+  color: #5372F0;
+}
+
+.quote-area .quote {
+  font-size: 18px;
+  text-align: center;
+  word-wrap: break-word;
+  max-width: 280px;
+}
+
+.author {
+  display: flex;
+  font-size: 16px;
+  margin-top: 15px;
+  font-style: italic;
+  justify-content: flex-end;
+}
+
+.author span:first-child {
+  font-family: monospace;
+}
+
+.buttons {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.features ul {
+  display: flex;
+  padding: 0;
+}
+
+.features ul li {
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  cursor: pointer;
+  color: #5372F0;
+  list-style: none;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #5372F0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.features ul li:hover {
+  color: #fff;
+  background: #5372F0;
+}
+
+.features ul .speech.active {
+  pointer-events: none;
+}
+
+button {
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: #5372F0;
+  width: 100%;
+  margin-top: 15px;
+  transition: opacity 0.3s ease;
+}
+
+button.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Media Query untuk layar kecil (Android) */
+@media (max-width: 600px) {
+  .wrapper {
+    margin-bottom:20px;
+    padding: 15px;
+  }
+
+  header {
+    font-size: 22px;
+  }
+
+  .quote-area .quote {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .features ul li {
+    height: 35px;
+    width: 35px;
+  }
+
+  button {
+    padding: 12px 18px;
+  }
+}
