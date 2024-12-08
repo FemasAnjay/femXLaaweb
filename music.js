@@ -28,8 +28,8 @@ function loadMusic(index) {
   const song = allMusic[index];
   musicName.innerText = song.name;
   musicArtist.innerText = song.artist;
-  musicImg.src = `images/${song.src}.jpg`;
-  mainAudio.src = `songs/${song.src}.mp3`;
+  musicImg.src = `{song.src}.jpg`;
+  mainAudio.src = `{song.src}.mp3`;
 }
 
 // Play music
